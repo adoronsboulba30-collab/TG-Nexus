@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1117">
+  <title>TG Nexus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">TG <span>NEXUS</span></div>
+        <div class="subtitle">Découvrez les meilleurs canaux Telegram</div>
+      </div>
+      <button class="icon-btn" id="profileBtn" aria-label="Profil">👤</button>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <h1>Tout Telegram,<br><span>au même endroit.</span></h1>
+        <p>Trouvez des chaînes populaires, de nouveaux créateurs et des communautés qui vous correspondent.</p>
+        <div class="search">
+          <span>🔎</span>
+          <input id="searchInput" type="search" placeholder="Rechercher un canal...">
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>🔥 Tendances</h2>
+          <button class="see-all" data-view="trending">Voir tout</button>
+        </div>
+        <div id="trending" class="channel-list"></div>
+      </section>
+
+      <section>
+        <div class="section-head"><h2>📂 Catégories</h2></div>
+        <div id="categories" class="categories"></div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>🆕 Nouveaux canaux</h2>
+          <button class="see-all" data-view="new">Voir tout</button>
+        </div>
+        <div id="newChannels" class="channel-list"></div>
+      </section>
+    </main>
+
+    <section id="profileView" class="hidden page">
+      <button class="back-btn" id="backHome">← Accueil</button>
+      <div class="profile-card">
+        <div class="avatar">👤</div>
+        <h1>Mon profil</h1>
+        <p>Connectez-vous à Telegram pour personnaliser votre expérience.</p>
+        <div class="stats">
+          <div><b>0</b><span>Favoris</span></div>
+          <div><b>0</b><span>Canaux ajoutés</span></div>
+          <div><b>0</b><span>Avis</span></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-nav="home">⌂<small>Accueil</small></button>
+      <button class="nav-item" data-nav="search">⌕<small>Recherche</small></button>
+      <button class="nav-item add" id="addBtn">＋<small>Ajouter</small></button>
+      <button class="nav-item" data-nav="ranking">★<small>Classement</small></button>
+      <button class="nav-item" data-nav="profile">♙<small>Profil</small></button>
+    </nav>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <h2>➕ Ajouter un canal</h2>
+      <p>La soumission des canaux sera activée dans une prochaine version.</p>
+      <button class="primary" id="closeModal2">Compris</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
